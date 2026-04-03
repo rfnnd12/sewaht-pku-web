@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Sewa HT Pekanbaru - SewaHT.Pku", // <-- Nama yang muncul di Tab
   description: "Pusat rental HT WLAN premium di Pekanbaru. Solusi komunikasi lancar untuk event dan proyek.",
   icons: {
-    icon: "/LOGOHT.png", // <-- Mengarahkan logo tab ke file kamu
+    icon: "/favicon.png", // <-- Mengarahkan logo tab ke file kamu
   },
 };
 
