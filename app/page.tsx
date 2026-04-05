@@ -14,7 +14,6 @@ export default function Home() {
     "/ht6.jpg",
   ];
 
-  // DURASI IDEAL: 2.5 DETIK (2500ms)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -38,27 +37,22 @@ export default function Home() {
         </a>
       </nav>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
         {/* KOLOM KIRI: AUTO SLIDER 2.5s */}
         <div className="space-y-6">
           <div className="relative bg-slate-50 rounded-[3rem] shadow-inner border-8 border-white overflow-hidden aspect-square flex items-center justify-center group">
-            
-            {/* Main Image dengan Transisi Halus */}
             <img 
               key={currentIndex}
               src={images[currentIndex]} 
               alt="HT Unit" 
               className="max-w-full max-h-full object-contain p-10 transition-all duration-1000 ease-in-out animate-in fade-in zoom-in-95"
             />
-
-            {/* Indikator Angka Modern */}
             <div className="absolute top-8 right-8 bg-white/80 backdrop-blur-md px-4 py-2 rounded-2xl text-[12px] font-black text-blue-600 shadow-sm border border-slate-100">
               0{currentIndex + 1} <span className="text-slate-300 mx-1">/</span> 06
             </div>
           </div>
 
-          {/* Progress Bar Indicators */}
           <div className="flex justify-center gap-3">
             {images.map((_, idx) => (
               <div 
@@ -86,7 +80,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* BOX HARGA YANG LEBIH COCOK (Mulai Dari) */}
+          {/* BOX HARGA */}
           <div className="flex items-center gap-4">
             <div className="bg-slate-900 text-white px-6 py-4 rounded-3xl shadow-xl shadow-slate-200">
                <p className="text-[10px] opacity-60 font-bold uppercase tracking-widest mb-1">Mulai Dari</p>
@@ -94,8 +88,31 @@ export default function Home() {
             </div>
             <div className="flex-1 border-l border-slate-100 pl-6 space-y-1">
                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest italic">Best Offer</p>
-               <p className="text-sm font-medium text-slate-500">Dapatkan harga khusus untuk penyewaan unit banyak.</p>
+               <p className="text-sm font-medium text-slate-500 leading-tight">Dapatkan harga khusus untuk penyewaan unit banyak.</p>
             </div>
+          </div>
+
+          {/* LOKASI MAPS */}
+          <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="bg-blue-600 p-2 rounded-xl text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Workshop & Pickup</p>
+                <p className="text-sm font-bold text-slate-700 leading-relaxed mt-1">
+                  Jl. Cendrawasih Gg. Persahabatan, Kp. Tengah, Kec. Sukajadi, Pekanbaru
+                </p>
+              </div>
+            </div>
+            <a 
+              href="https://maps.app.goo.gl/9Z7K6vS46C2z9m5w9" 
+              target="_blank"
+              className="inline-flex items-center gap-2 text-xs font-black text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-widest"
+            >
+              Petunjuk Arah 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
 
           <div className="pt-4">
