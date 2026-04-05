@@ -84,7 +84,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <div className="bg-slate-900 text-white px-6 py-4 rounded-3xl shadow-xl shadow-slate-200">
                <p className="text-[10px] opacity-60 font-bold uppercase tracking-widest mb-1">Mulai Dari</p>
-               <p className="text-3xl font-black tracking-tight">Rp DM<span className="text-sm font-normal opacity-50 ml-1">/hari</span></p>
+               <p className="text-3xl font-black tracking-tight">Rp Dm<span className="text-sm font-normal opacity-50 ml-1">/hari</span></p>
             </div>
             <div className="flex-1 border-l border-slate-100 pl-6 space-y-1">
                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest italic">Best Offer</p>
@@ -106,7 +106,7 @@ export default function Home() {
               </div>
             </div>
             <a 
-              href="https://maps.app.goo.gl/9Z7K6vS46C2z9m5w9" 
+              href="https://share.google/afMmwXt70eRjeiuF9" 
               target="_blank"
               className="inline-flex items-center gap-2 text-xs font-black text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-widest"
             >
